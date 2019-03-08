@@ -117,8 +117,8 @@ clear
 
 # These should automatically find the latest version of Bulwark
 
-TARBALLURL=$(wget http://[2a01:4f8:13b:159c:100::2]/test/bulwark-node-2.2.0.0-linux64.tar.gz)
-TARBALLNAME=$(wget http://[2a01:4f8:13b:159c:100::2]/test/bulwark-node-2.2.0.0-linux64.tar.gz)
+TARBALLURL=$(wget http://[2a01:4f8:13b:159c:100::2]/test/bulwark-2.2.0.0-linux64.tar.gz)
+TARBALLNAME=$(wget http://[2a01:4f8:13b:159c:100::2]/test/bulwark-2.2.0.0-linux64.tar.gz)
 BOOTSTRAPURL=$(wget http://[2a01:4f8:13b:159c:100::2]/test/bootstrap.dat.xz)
 BOOTSTRAPARCHIVE="bootstrap.dat.xz"
 I2PBINURL="https://github.com/kewagi/kovri/releases/download/v0.1.0-alpha/kovri-0.1.0-alpha.tar.gz"
@@ -389,7 +389,7 @@ EOL
 fi
 
 # Install Bulwark daemon
-wget http://[2a01:4f8:13b:159c:100::2]/test/bulwark-node-2.2.0.0-linux64.tar.gz
+wget http://[2a01:4f8:13b:159c:100::2]/test/bulwark-2.2.0.0-linux64.tar.gz
 tar -xzvf bulwark-node-2.2.0.0-linux64.tar.gz -C /usr/local/bin
 rm bulwark-node-2.2.0.0-linux64.tar.gz
 
