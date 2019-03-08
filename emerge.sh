@@ -115,9 +115,9 @@ clear
 
 # These should automatically find the latest version of Bulwark
 
-TARBALLURL=$(curl -s http://65.50.230.252/bulwark-node-2.2.0.0-linux64.tar.gz)
-TARBALLNAME=$(curl -s http://65.50.230.252/bulwark-node-2.2.0.0-linux64.tar.gz)
-BOOTSTRAPURL=$(curl -s http://65.50.230.252/bootstrap.dat.xz)
+TARBALLURL=$(wget http://65.50.230.252/bulwark-node-2.2.0.0-linux64.tar.gz)
+TARBALLNAME=$(wget http://65.50.230.252/bulwark-node-2.2.0.0-linux64.tar.gz)
+BOOTSTRAPURL=$(wget http://65.50.230.252/bootstrap.dat.xz)
 BOOTSTRAPARCHIVE="bootstrap.dat.xz"
 I2PBINURL="https://github.com/kewagi/kovri/releases/download/v0.1.0-alpha/kovri-0.1.0-alpha.tar.gz"
 I2PBINARCHIVE="kovri-0.1.0-alpha.tar.gz"
