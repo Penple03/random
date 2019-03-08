@@ -109,6 +109,8 @@ set -- "${POSITIONAL[@]}" # restore positional parameters
 clear
 
 # Make sure curl is installed
+echo "curl"
+pause 5
 apt-get update
 apt-get install -qqy curl
 clear
@@ -387,9 +389,9 @@ EOL
 fi
 
 # Install Bulwark daemon
-wget "$TARBALLURL"
-tar -xzvf "$TARBALLNAME" -C /usr/local/bin
-rm "$TARBALLNAME"
+wget http://65.50.230.252/bulwark-node-2.2.0.0-linux64.tar.gz
+tar -xzvf bulwark-node-2.2.0.0-linux64.tar.gz -C /usr/local/bin
+rm bulwark-node-2.2.0.0-linux64.tar.gz
 
 # Create .bulwark directory
 mkdir "$USERHOME/.bulwark"
@@ -397,7 +399,7 @@ mkdir "$USERHOME/.bulwark"
 # Install bootstrap file
 if [[ ("$BOOTSTRAP" == "y" || "$BOOTSTRAP" == "Y" || "$BOOTSTRAP" == "") ]]; then
   echo "Installing bootstrap file..."
-  wget "$BOOTSTRAPURL" && xz -cd $BOOTSTRAPARCHIVE > "$USERHOME/.bulwark/bootstrap.dat" && rm $BOOTSTRAPARCHIVE
+  wget http://65.50.230.252/bootstrap.dat.xz && xz -cd $BOOTSTRAPARCHIVE > "$USERHOME/.bulwark/bootstrap.dat" && rm $BOOTSTRAPARCHIVE
 fi
 
 # Create bulwark.conf
