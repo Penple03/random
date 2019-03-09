@@ -158,7 +158,7 @@ systemctl --version >/dev/null 2>&1 || { echo "systemd is required. Are you usin
 
 # Get our current IP
 if [ -z "$EXTERNALIP" ]; then
-EXTERNALIP=$(dig +short -6 myip.opendns.com aaaa @resolver1.ipv6-sandbox.opendns.com)
+EXTERNALIP=$(dig +short -4 myip.opendns.com a @resolver1.opendns.com)
 fi
 clear
 
