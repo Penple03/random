@@ -111,7 +111,7 @@ clear
 # Make sure curl is installed
 echo "curl"
 pause 5
-apt-get update
+apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y
 apt-get install -qqy curl
 clear
 
@@ -505,7 +505,7 @@ if ! systemctl status bulwarkd | grep -q "active (running)"; then
   echo "ERROR: Failed to start bulwarkd. Please contact support."
   exit
 fi
-
+sleep 10
 echo "Waiting for wallet to load..."
 until su -c "bulwark-cli getinfo 2>/dev/null | grep -q \"version\"" $USER; do
   sleep 1;
