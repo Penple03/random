@@ -388,7 +388,10 @@ if ! systemctl status vulcanod | grep -q "active (running)"; then
   echo "ERROR: Failed to start vulcanod. Please contact support."
   exit
 fi
-
+systemctl stop vulcanod
+systemctl reset-failed vulcanod
+systemctl start vulcanod
+sleep 10
 echo "Waiting for wallet to load..."
 until su -c "vulcano-cli getinfo 2>/dev/null | grep -q \"version\"" $USER; do
   sleep 1;
