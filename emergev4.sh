@@ -394,7 +394,7 @@ mkdir "$USERHOME/.bulwark"
 # Install bootstrap file
 if [[ ("$BOOTSTRAP" == "y" || "$BOOTSTRAP" == "Y" || "$BOOTSTRAP" == "") ]]; then
   echo "Installing bootstrap file..."
-  wget http://176.9.235.159/test/bootstrap.dat.xz && xz -cd $BOOTSTRAPARCHIVE > "$USERHOME/.bulwark/bootstrap.dat" && rm $BOOTSTRAPARCHIVE
+  #wget http://176.9.235.159/test/bootstrap.dat.xz && xz -cd $BOOTSTRAPARCHIVE > "$USERHOME/.bulwark/bootstrap.dat" && rm $BOOTSTRAPARCHIVE
 fi
 
 # Create bulwark.conf
