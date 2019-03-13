@@ -342,17 +342,14 @@ externalip=${EXTERNALIP}
 masternodeaddr=${EXTERNALIP}
 masternodeprivkey=${KEY}
 masternode=1
-addnode=138.201.245.247:62543
-addnode=159.69.80.141:62543
-addnode=159.69.84.71:62543
-addnode=159.69.81.163:62543
-addnode=159.69.83.104:62543
-addnode=95.216.147.117:62543
-addnode=95.216.148.73:62543
-addnode=95.216.147.210:62543
-addnode=159.69.49.144:62543
-addnode=138.201.190.47:62543
-addnode=138.201.175.10:62543
+addnode=[2a01:4f8:13a:1262:199::2a]
+addnode=[2a01:4f9:2a:2d23:200::17]
+addnode=[2a01:4f9:2a:2d23:200::3]
+addnode=[2a01:4f8:13b:159c:199::4]
+addnode=[2a01:4f8:13a:195d:199::7]
+addnode=[2a01:4f8:13a:1262:199::1]
+addnode=[2a01:4f8:13a:1311:199::7]
+addnode=[2a01:4f8:13a:95c:199::2]
 EOL
 fi
 chmod 0600 $USERHOME/.vulcanocore/vulcano.conf
